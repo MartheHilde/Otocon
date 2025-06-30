@@ -1,0 +1,124 @@
+
+* {
+  box-sizing: border-box;
+}
+
+.landing > * {
+  margin: 0.5rem 0; /* små marginer opp/ned for jevn avstand */
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Bahnschrift', 'Helvetica', 'Arial';
+  background-image: url(assets/Background.png);
+  /* background: linear-gradient(135deg, #FFFD76, #15F7FF, #FF80A2);*/
+  background-size: cover;
+}
+
+.navbar {
+  background-color: #03106B;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  margin-left: auto; /* skyver den til høyre på små skjermer */
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 1rem;
+    top: 70px;
+    background-color: #03106B;
+    padding: 1rem;
+    border-radius: 8px;
+    z-index: 100;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
+.landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 80px); /* juster hvis navbaren er høyere enn 80px */
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.logo-center img{
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+}
+
+.logo-text img {
+    width: 500px;
+    height: auto;
+}
+
+.logo-center img, 
+.logo-text img {
+    margin-bottom: -2rem;
+}
+
+.headline {
+  font-family: 'Forte', cursive;
+  font-size: 3rem;
+  color: #E12384;
+  text-shadow: 2px 2px #FFFD76;
+}
+
+.year {
+  font-size: 3rem;
+  color: #03106B;
+}
+.content {
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #03106B;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+}
+
+.content.center {
+  text-align: center;
+}
