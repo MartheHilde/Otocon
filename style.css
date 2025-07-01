@@ -11,10 +11,11 @@ html, body {
   margin: 0;
   padding: 0;
 }
+/* FOR FONT MISC*/
 
 body {
   margin: 0;
-  font-family: 'Bahnschrift', 'Helvetica', 'Arial';
+  font-family: 'Bahnschrift', 'Gidole', 'Helvetica', 'Arial';
   background-image: url(assets/Background.png);
   /* background: linear-gradient(135deg, #FFFD76, #15F7FF, #FF80A2);*/
   background-size: cover;
@@ -100,10 +101,10 @@ body {
 }
 
 .headline {
-  font-family: 'Forte', cursive;
-  font-size: 3rem;
-  color: #E12384;
-  text-shadow: 2px 2px #FFFD76;
+  font-family: 'Forte', 'Zapfino', 'Arial' cursive;
+  font-size: 4rem;
+  color: #FFFD76;
+  text-shadow: 2px 2px 4px #E12384;
 }
 
 .year {
