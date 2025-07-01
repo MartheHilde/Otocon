@@ -105,20 +105,30 @@ body {
   font-size: 4rem;
   color: #FFFD76;
   text-shadow: 2px 2px 4px #E12384;
+  margin-bottom: 1rem;
 }
+
 
 .year {
   font-size: 3rem;
   color: #03106B;
 }
 .content {
-  padding: 4rem 2rem;
-  max-width: 800px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 2rem;
+  max-width: 1000px;
+  margin: 4rem auto;
   color: #03106B;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.65); /* mer gjennomsiktig */
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* legg til dybde */
+  backdrop-filter: blur(6px); /* myk "frosted glass"-effekt */
+  text-align: center;
 }
+
 
 .content.center {
   text-align: center;
