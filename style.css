@@ -3,9 +3,10 @@
   box-sizing: border-box;
 }
 
-.landing > * {
-  margin: 0.5rem 0; /* små marginer opp/ned for jevn avstand */
-}
+/* .landing > * {
+  margin: 0.5rem 0; 
+} */
+
 html, body {
   height: 100%;
   margin: 0;
@@ -17,7 +18,6 @@ body {
   margin: 0;
   font-family: 'Bahnschrift', 'Gidole', 'Helvetica', 'Arial';
   background-image: url(assets/Background.png);
-  /* background: linear-gradient(135deg, #FFFD76, #15F7FF, #FF80A2);*/
   background-size: cover;
 }
 
@@ -79,10 +79,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: calc(100vh - 80px); /* juster hvis navbaren er høyere enn 80px */
-  padding: 2rem 1rem;
+  min-height: 100vh; /* juster hvis navbaren er høyere enn 80px */
   text-align: center;
+  padding: auto;
 }
+
 
 .logo-center img{
     width: 400px;
@@ -97,7 +98,7 @@ body {
 
 .logo-center img, 
 .logo-text img {
-    margin-bottom: -2rem;
+    margin-bottom: -4rem;
 }
 
 .headline {
@@ -132,4 +133,22 @@ body {
 
 .content.center {
   text-align: center;
+}
+
+.social-footer {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.social-footer a {
+  color: #03106B;
+  font-size: 2rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-footer a:hover {
+  color: #E12384;
+  transform: scale(1.2);
 }
