@@ -311,6 +311,9 @@ body {
   .hamburger {
     display: block;
   }
+    #main-footer {
+    display: none;
+  }
 }
 
 
@@ -392,4 +395,5 @@ body {
     margin-top: 1rem;
     margin-bottom: 1.5rem;
   }
+
 }
