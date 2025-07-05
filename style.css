@@ -1,25 +1,32 @@
+/* --- Velkommen til stylingsboksen! --- */
 * {
   box-sizing: border-box;
 }
 
-html, body {
+html {
   height: 100%;
-  margin: 0;
-  padding: 0;
 }
 
 body {
+  display: flex; 
+  flex-direction: column; 
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
   font-family: 'Bahnschrift', 'Gidole', 'Helvetica', 'Arial', sans-serif;
   background-image: url(assets/Background.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin: 0;
 }
 
-/* NAVBAR */
+.site-content {
+  flex-grow: 1;
+}
+
+
+/* --- Navigasjon (Navbar) --- */
 .navbar {
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -31,12 +38,7 @@ body {
   padding: 1rem 2rem;
   font-size: 2rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  align-items: center;  
-  justify-content: space-between; /* Mellomrom mellom logo og linker */
 }
-
-
-
 
 .navbar a {
   color: #03106B;
@@ -67,7 +69,6 @@ body {
   font-weight: bold;
 }
 
-/* HAMBURGERMENY */
 .hamburger {
   display: none;
   font-size: 2rem;
@@ -77,24 +78,20 @@ body {
 }
 
 
-
-/* Landing (forside) styling */
+/* --- Landing page / forside --- */
 .landing {
-  padding-top: 100px; 
-  min-height: 100vh;
+  padding-top: 4rem; 
   text-align: center;
   padding-bottom: 2rem;
 }
 
-/* Logo + tekst */
 .logo-center img {
   width: 80%;      
   max-width: 400px; 
   height: auto;
   margin-bottom: -4rem;
-  margin-top: 4rem
+  margin-top: 4rem;
 }
-
 
 .logo-text img {
   width: 90%;   
@@ -108,10 +105,12 @@ body {
   color: #03106B;
 }
 
+
+/* --- Innholdsseksjon --- */
 .content {
-  padding-top: 100px; 
   max-width: 1000px;
-  margin: 4rem auto;
+  margin: 6rem auto 4rem auto;
+  padding: 2rem;
   color: #03106B;
   background-color: rgba(255, 255, 255, 0.65);
   border-radius: 16px;
@@ -120,6 +119,8 @@ body {
   text-align: center;
 }
 
+
+/* --- Tidligere footer med sosiale medier (brukes evt. ikke) --- */
 .social-footer {
   display: flex;
   justify-content: center;
@@ -138,9 +139,161 @@ body {
   transform: scale(1.2);
 }
 
-/* MOBIL */
 
+/* --- Info-bokser --- */
+.info-boks {
+  background-color: rgba(255, 255, 255, 0.88);
+  border-radius: 1.5rem;
+  padding: 3rem 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  line-height: 1.6;
+  max-width: 1000px;
+  margin: 6rem auto 4rem auto;
+  color: #03106B;
+  box-sizing: border-box;
+}
+
+.info-boks h1,
+.info-boks h2,
+.info-boks h4 {
+  font-family: 'Gidole', 'Roboto', sans-serif;
+  color: #03106B;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.info-boks h1 {
+  font-size: 3.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+}
+
+.info-boks h2 {
+  font-size: 2.5rem;
+  text-decoration: underline;
+  text-decoration-color: rgba(225, 35, 132, 0.3);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 8px;
+}
+
+.info-boks p {
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+  color: #333;
+}
+
+.info-boks ul,
+.info-boks ol {
+  margin-left: 2rem;
+  margin-bottom: 1.5rem;
+  padding-left: 0;
+  list-style-position: inside;
+}
+
+.info-boks ul li,
+.info-boks ol li {
+  line-height: 1.8;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.info-boks ul li {
+  list-style-type: disc;
+}
+
+.info-boks ol li {
+  list-style-type: decimal;
+}
+
+.info-boks a {
+  color: #0a0a5a;
+  text-decoration: underline;
+  word-break: break-word;
+}
+
+
+/* --- Knapp --- */
+.button-primary {
+  color: white;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.button-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+
+/* --- Footer --- */
+#main-footer {
+  background-color: #f5f5f5;
+  padding: 3rem 0;
+  text-align: center;
+  color: #555;
+  font-size: 0.95rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+  flex-shrink: 0;
+}
+
+#main-footer p {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+#main-footer a {
+  color: #03106B;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#main-footer a:hover {
+  color: #E12384;
+}
+
+#main-footer .social-icons {
+  margin-bottom: 1rem;
+}
+
+#main-footer .social-icons p {
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+#main-footer .social-icons a {
+  font-size: 1.8rem;
+  margin: 0 10px;
+  display: inline-block;
+  vertical-align: middle;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#main-footer .social-icons a:hover {
+  color: #E12384;
+  transform: scale(1.15);
+}
+
+
+/* --- Responsivitet: Mobil (<480px) --- */
 @media (max-width: 480px) {
+  .content {
+    margin: 3rem auto 2rem auto;
+    padding: 1.5rem 1rem;
+  }
+
+  .info-boks {
+    padding: 1.5rem 1.2rem;
+    border-radius: 1rem;
+    margin: 0 auto;
+    max-width: none;
+    width: auto;
+  }
+
   .logo-center img {
     width: 90%; 
     max-width: 250px;
@@ -155,11 +308,51 @@ body {
   .year {
     font-size: 2rem;
   }
+  
+  .info-boks h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .info-boks h2 {
+    font-size: 1.8rem;
+    text-underline-offset: 5px;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .info-boks p {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .info-boks p:first-of-type {
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .info-boks ul,
+  .info-boks ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .info-boks ul li,
+  .info-boks ol li {
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .button-primary {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 
-/* PAD og hamburgermeny*/
-
+/* --- Responsivitet: Tablet / hamburger (<=768px) --- */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -176,7 +369,8 @@ body {
   .nav-links.show {
     display: flex;
   }
-    .logo-center img {
+
+  .logo-center img {
     width: 85%;
     max-width: 350px;
   }
@@ -190,4 +384,13 @@ body {
   .hamburger {
     display: block;
   }
+}
+
+
+/* --- Diverse --- */
+.bw-logo {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  margin: 2rem auto;
 }
