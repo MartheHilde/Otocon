@@ -1,4 +1,3 @@
-/* --- Velkommen til stylingsboksen! --- */
 * {
   box-sizing: border-box;
 }
@@ -17,8 +16,8 @@ body {
   background-image: url(assets/Background.png);
   background-position: center top;
   background-repeat: repeat-y;
-  background-size: cover; /* viktig for mobil */
-  position: relative; /* For at ::before skal legge seg korrekt */
+  background-size: cover;
+  position: relative;
   z-index: 0;
   overflow-x: hidden;
 }
@@ -32,9 +31,8 @@ body::before {
   height: 80px;
   background: linear-gradient(to top, rgba(255,255,255,0) 0%, white 100%);
   pointer-events: none;
-  z-index: -1; /* <- også viktig */
+  z-index: -1;
 }
-
 
 body::after {
   content: "";
@@ -45,16 +43,13 @@ body::after {
   height: 80px;
   background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, white 100%);
   pointer-events: none;
-  z-index: -1; /* <- VIKTIG */
+  z-index: -1;
 }
-
 
 .site-content {
   flex-grow: 1;
 }
 
-
-/* --- Navigasjon (Navbar) --- */
 .navbar {
   top: 0;
   left: 0;
@@ -115,8 +110,6 @@ body::after {
   margin-left: auto;
 }
 
-
-/* --- Landing page / forside --- */
 .landing {
   display: flex;
   flex-direction: column;
@@ -132,7 +125,7 @@ body::after {
   width: 100%;
   max-width: 300px;
   height: auto;
-  margin-bottom: 1rem; /* Ikke negativ margin */
+  margin-bottom: 1rem;
 }
 
 .logo-text img {
@@ -149,8 +142,6 @@ body::after {
   margin-top: 0.5rem;
 }
 
-
-/* --- Innholdsseksjon --- */
 .content {
   max-width: 900px;
   margin: 2rem auto 1.5rem auto;
@@ -158,11 +149,9 @@ body::after {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 12px;
   box-shadow: none; 
-  text-align: center
+  text-align: center;
 }
 
-
-/* --- Tidligere footer med sosiale medier (brukes evt. ikke) --- */
 .social-footer {
   display: flex;
   justify-content: center;
@@ -181,16 +170,13 @@ body::after {
   transform: scale(1.2);
 }
 
-
-/* --- Info-bokser --- */
 .info-boks {
   padding: 1rem 1.5rem;
   margin: 2rem auto 1.5rem auto;
   border-radius: 12px;
-  box-shadow: none; /* Fjern skygge her også */
-  background-color: transparent; /* Eller veldig svak hvit, f.eks rgba(255,255,255,0.9) */
+  box-shadow: none;
+  background-color: transparent;
   color: #222;
-  text-align: center;
 }
 
 .info-boks h1,
@@ -199,6 +185,8 @@ body::after {
   margin-top: 1rem;
   margin-bottom: 0.5rem;
   font-weight: 600;
+  color: #03106B;
+  text-align: center;
 }
 
 .info-boks h1 {
@@ -214,25 +202,53 @@ body::after {
   text-underline-offset: 8px;
 }
 
+.info-boks h4 {
+  font-size: 1.8rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #E12384;
+}
+
 .info-boks p {
   margin-bottom: 0.6rem;
-  line-height: 1.4;
+  line-height: 1.6;
   color: #333;
+  text-align: left;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.info-boks p:first-of-type {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  max-width: 600px;
+}
+
+.info-boks p:nth-of-type(2) {
+  margin-bottom: 2rem;
+  text-align: center;
+  max-width: 600px;
 }
 
 .info-boks ul,
 .info-boks ol {
-  margin-left: 2rem;
   margin-bottom: 1.5rem;
   padding-left: 0;
   list-style-position: inside;
+  text-align: left;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .info-boks ul li,
 .info-boks ol li {
   line-height: 1.8;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
   color: #333;
+  text-align: left;
 }
 
 .info-boks ul li {
@@ -243,19 +259,46 @@ body::after {
   list-style-type: decimal;
 }
 
+.info-boks ol li em {
+  display: block;
+  margin-top: 0.2rem;
+}
+
 .info-boks a {
   color: #0a0a5a;
   text-decoration: underline;
   word-break: break-word;
 }
 
+.info-boks h4 + p {
+  text-align: left;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-/* --- Knapp --- */
+.nb-tekst {
+  text-align: center;
+  max-width: 600px;
+  margin: 2rem auto 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+.button-primary + .nb-tekst {
+  margin-top: 2.5rem;
+  align-items: center;
+}
+
 .button-primary {
   color: white;
   border-radius: 8px;
   transition: background-color 0.3s ease, transform 0.2s ease;
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  margin-top: 2.5rem !important;
+  margin-bottom: 2.5rem;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
 }
 
 .button-primary:hover {
@@ -263,8 +306,6 @@ body::after {
   box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
 
-
-/* --- Footer --- */
 #main-footer {
   background-color: #f5f5f5;
   padding: 3rem 0;
@@ -313,8 +354,6 @@ body::after {
   transform: scale(1.15);
 }
 
-
-/* --- Responsivitet: Tablet / hamburger (<=768px) --- */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -345,16 +384,16 @@ body::after {
 
   .hamburger {
     display: block;
-    font-size: 2.8rem; /* større ikon */
+    font-size: 2.8rem;
     margin-left: 1rem;
   }
-    #main-footer {
+  #main-footer {
     display: none;
   }
   .navbar {
-  justify-content: space-between;
-  position: relative;
-}
+    justify-content: space-between;
+    position: relative;
+  }
   .nav-links {
     background-color: #FF80A2;
     padding: 1rem;
@@ -363,28 +402,26 @@ body::after {
     top: 100%;
     z-index: 1000;
     box-shadow: 0 2px 6px rgba(100, 0, 72, 0.1);
-}
+  }
 
-.navbar-icons {
-  display: flex;
-  gap: 1rem;
-  margin-right: 0;
-  align-items: center;
-}
+  .navbar-icons {
+    display: flex;
+    gap: 1rem;
+    margin-right: 0;
+    align-items: center;
+  }
   .navbar-icons,
-.hamburger {
-  position: absolute;
-  right: 1.5rem;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.navbar-icons {
-  margin-right: 4rem;
-}
+  .hamburger {
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .navbar-icons {
+    margin-right: 4rem;
+  }
 }
 
-
-/* --- Diverse --- */
 .bw-logo {
   width: 100%;
   max-width: 200px;
@@ -392,7 +429,6 @@ body::after {
   margin: 2rem auto;
 }
 
-/* --- Responsivitet: Mobil (<300px) --- */
 @media (max-width: 300px) {
   .content {
     margin: 3rem auto 2rem auto;
@@ -435,17 +471,25 @@ body::after {
   .info-boks p {
     font-size: 1rem;
     margin-bottom: 0.8rem;
+    text-align: left;
+    max-width: 100%;
   }
 
-  .info-boks p:first-of-type {
+  .info-boks p:first-of-type,
+  .info-boks p:nth-of-type(2),
+  .info-boks p:last-of-type {
     font-size: 1.05rem;
     margin-bottom: 1.5rem;
+    text-align: center;
+    max-width: 100%;
   }
 
   .info-boks ul,
   .info-boks ol {
-    margin-left: 1.5rem;
-    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    padding-left: 0;
   }
 
   .info-boks ul li,
@@ -460,5 +504,4 @@ body::after {
     margin-top: 1rem;
     margin-bottom: 1.5rem;
   }
-
 }
